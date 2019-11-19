@@ -1,0 +1,30 @@
+
+.login-main {
+    padding: 50px;
+    background: #3c763d;
+    width: 100px;
+    height: 500px;
+}
+
+.wrapper{
+    　　height:100%
+}
+
+.wrapper:before{
+    content:"";
+    display:inline-block;
+    height:100%;
+    vetical-align:middle;
+}
+
+.login-label {
+    width: 100px;
+    display: inline-block;
+    vetical-align:middle;
+}
+
+.login-input {
+    width: 200px;
+    display: inline-block;
+    vetical-align:middle;
+}
