@@ -1,4 +1,6 @@
-<div align=center>![](https://www.strongyang.com/static/kits3.png)
+<div align=center>
+![](https://www.strongyang.com/static/kits3.png)
+</div>
 
 # kits
 ### 介绍
