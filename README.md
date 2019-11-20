@@ -1,4 +1,5 @@
-![](https://www.strongyang.com/static/kits3.png)
+<div align=center>![](https://www.strongyang.com/static/kits3.png)
+
 # kits
 ### 介绍
    一款安全可靠的云存储管理平台，使用SpringSecurity Oauth2、SpringBoot2.0搭建
