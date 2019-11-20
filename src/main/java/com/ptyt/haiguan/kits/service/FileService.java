@@ -35,6 +35,8 @@ public class FileService {
             return null;
         }
         List list = new ArrayList();
+        List folderList = new ArrayList();
+        List fileList = new ArrayList();
         File[] files = file.listFiles();
         if(files != null && files.length > 0){
             for(File f : files){
@@ -42,11 +44,14 @@ public class FileService {
                 fileVo.setPath(parentDir + "/" + f.getName());
                 if(f.isDirectory()){
                     fileVo.setType(FileConstant.FILE_TYPE_DIR);
+                    folderList.add(fileVo);
                 } else {
                     fileVo.setType(FileConstant.FILE_TYPE_FILE);
+                    fileList.add(fileVo);
                 }
-                list.add(fileVo);
             }
+            list.addAll(folderList);
+            list.addAll(fileList);
         }
         return list;
     }

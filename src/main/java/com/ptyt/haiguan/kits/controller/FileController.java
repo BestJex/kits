@@ -1,5 +1,6 @@
 package com.ptyt.haiguan.kits.controller;
 
+import com.alibaba.fastjson.JSONObject;
 import com.ptyt.haiguan.kits.service.FileService;
 import com.ptyt.haiguan.kits.vo.R;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,9 +33,9 @@ public class FileController {
         return fileService.getFileListByPath(new File(fileLocation), "");
     }
 
-    @GetMapping("/getFileListByDir/{dir}")
-    public List getFileListByDir(@PathVariable("dir") String dir) {
-        return fileService.getFileListByPath(new File(fileLocation + File.separator + dir), "/" + dir);
+    @GetMapping("/getFileListByDir")
+    public List getFileListByDir(@RequestParam("dir") String dir) {
+        return fileService.getFileListByPath(new File(fileLocation + File.separator + dir), dir);
     }
 
     @GetMapping("/getDirectoryList")
@@ -57,9 +58,9 @@ public class FileController {
         return "upload";
     }
 
-    @PostMapping("/createFolder/{folderName}")
-    public R createFolder(@PathVariable("folderName") String folderName) {
-        return fileService.createFolder(fileLocation + "/" + folderName);
+    @PostMapping("/createFolder")
+    public R createFolder(@RequestBody JSONObject jsonObject) {
+        return fileService.createFolder(fileLocation + jsonObject.getString("folderPath"));
     }
 
     @PostMapping("/uploadWithPath")

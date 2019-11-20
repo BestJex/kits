@@ -4,6 +4,6 @@ server:
 spring:
   application:
     name: kits
-  fileLocation: D:/ftpdata
+  fileLocation: /home/kits/file
   userName: admin
   password: 123456
